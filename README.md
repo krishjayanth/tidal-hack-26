@@ -2,28 +2,28 @@
 
 <div align="center">
   <h3>The Future Isn't a Mystery. It's an Equation.</h3>
-  <p>High-Fidelity AI Synthesis for Prediction Market Alpha.</p>
+  <p>High-Fidelity AI Synthesis for Prediction Market Edge.</p>
   https://tidal-hack-26.vercel.app/
 </div>
 
 ---
 
-## 🚀 Overview
+## Overview
 
-**ApolloMarkets** is a next-generation intelligence platform designed to validate and predict probabilities for prediction markets (like Polymarket). By leveraging advanced Large Language Models (LLMs) via OpenRouter (specifically optimized for reasoning models like DeepSeek R1), ApolloMarkets synthesizes "Correlated Signals"—related real-world events—to calculate a more accurate "True Probability" than the current market consensus.
+**ApolloMarkets** is a next-generation AI-powered intelligence platform that improves prediction market accuracy by comparing an event’s market odds with probabilities from related, correlated events. Using advanced reasoning-focused LLMs via OpenRouter, ApolloMarkets synthesizes these “correlated signals” to estimate a more reliable true probability than the market’s current consensus..
 
 It detects market inefficiencies, providing an **Alpha Index** and **Confidence Score** to help traders identify undervalued or overvalued positions.
 
-## ✨ Key Features
+## Key Features
 
 -   **High-Fidelity Synthesis**: Uses Bayesian-style inference to adjust probabilities based on correlated event outcomes.
 -   **Correlated Signal Analysis**: Manually input related events (e.g., "Fed Rate Cut" vs. "Bitcoin Price") to see how they impact the target prediction.
 -   **Quantitative "Apollo Prob"**: Generates a distinct probability coupled with a divergence metric (Delta) from the market price.
 -   **Confidence & Alpha Scoring**: specific metrics to gauge the strength of the prediction and the potential market inefficiency.
 -   **Visual Intel**: Interactive charts visualizing the spread between Market Price and Apollo's Predicted Probability.
--   **Reasoning Engine**: Provides a detailed, text-based synthesis report explaining the *why* behind the numbers.
+-   **Reasoning Engine**: Provides a detailed, text-based synthesis report explaining the reasoning behind the numbers.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend Framework**: React 19 (via Vite)
 -   **Language**: TypeScript
@@ -68,7 +68,7 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
 
 5.  Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## 🧩 Usage
+## Usage
 
 1.  **Define Target**: Enter the Market Question you want to analyze (e.g., "Will Bitcoin hit $100k?").
 2.  **Set Market Price**: Input the current trading probability from the prediction market.
@@ -77,7 +77,7 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
 4.  **Run Analysis**: Click "Run Analysis" to let the AI agent synthesize the data.
 5.  **Review Intel**: Read the generated report and check the "Apollo Prob" vs. "Market Price" to find your edge.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 **ApolloMarkets is a research tool.** The predictions generated are probabilistic estimates based on AI synthesis of provided inputs. They do not constitute financial advice. Prediction markets involve significant risk.
 
