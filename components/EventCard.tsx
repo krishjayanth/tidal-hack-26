@@ -17,13 +17,16 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isTarget, onUpdate,
   };
 
   return (
-    <div className={`p-6 fintech-card ${isTarget ? 'border-2 border-indigo-600 bg-indigo-50/10' : ''}`}>
+    <div className={`p-6 rounded-xl transition-all ${isTarget
+        ? 'border-2 border-blue-500/30 bg-gradient-to-br from-blue-500/10 to-transparent shadow-lg shadow-blue-500/5'
+        : 'border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-transparent hover:border-purple-500/40 hover:from-purple-500/20 hover:to-purple-500/5'
+      }`}>
       <div className="flex justify-between items-center mb-5">
-        <span className={`text-[10px] font-black uppercase tracking-[0.2em] ${isTarget ? 'text-indigo-600' : 'text-slate-400'}`}>
+        <span className={`text-[10px] font-black uppercase tracking-[0.2em] ${isTarget ? 'text-blue-500' : 'text-purple-500'}`}>
           {isTarget ? 'Target Asset' : 'Correlation Variable'}
         </span>
         {onRemove && (
-          <button 
+          <button
             onClick={() => onRemove(event.id)}
             className="p-1 text-slate-300 hover:text-red-500 hover:bg-red-50 rounded transition-all"
             title="Remove Variable"
@@ -34,11 +37,11 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isTarget, onUpdate,
           </button>
         )}
       </div>
-      
+
       <div className="space-y-5">
         <div>
           <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Market Name</label>
-          <input 
+          <input
             type="text"
             value={event.name}
             onChange={(e) => handleChange('name', e.target.value)}
@@ -49,7 +52,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isTarget, onUpdate,
 
         <div>
           <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Context Description</label>
-          <textarea 
+          <textarea
             rows={3}
             value={event.description}
             onChange={(e) => handleChange('description', e.target.value)}
@@ -57,7 +60,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isTarget, onUpdate,
             className="w-full px-3 py-2.5 border border-slate-200 rounded-md bg-white text-sm text-slate-900 placeholder:text-slate-300 transition-all focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 resize-none"
           />
         </div>
-        
+
         <div className="pt-2">
           <div className="flex justify-between items-center mb-2">
             <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">
@@ -67,7 +70,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isTarget, onUpdate,
               {event.probability}%
             </span>
           </div>
-          <input 
+          <input
             type="range"
             min="0"
             max="100"

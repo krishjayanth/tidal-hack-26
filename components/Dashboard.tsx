@@ -157,7 +157,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
                     </div>
 
                     {/* Results */}
-                    <div className="lg:col-span-7 xl:col-span-8">
+                    <div className="lg:col-span-7 xl:col-span-8 space-y-8">
+                        <div className="border-b border-slate-100 pb-2">
+                            <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">System Status</h3>
+                        </div>
                         {!result && !isLoading && !error && (
                             <div className="h-full min-h-[500px] flex flex-col items-center justify-center border border-dashed border-slate-200 rounded-lg bg-slate-50/30 text-slate-400 p-12 text-center">
                                 <div className="bg-slate-100 p-4 rounded-full mb-6">
