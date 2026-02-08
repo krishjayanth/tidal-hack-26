@@ -265,7 +265,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
                                                     // Format numbers and math operators
                                                     return part.split(/(\d+(?:\.\d+)?%?|\s*[+\-=<>:/]\s*)/g).map((subPart, subIndex) => {
                                                         if (/^(\d+(?:\.\d+)?%?|\s*[+\-=<>:/]\s*)$/.test(subPart)) {
-                                                            return <span key={`${index}-${subIndex}`} className="font-mono">{subPart}</span>;
+                                                            return <span key={`${index}-${subIndex}`} className="font-mono text-indigo-600">{subPart}</span>;
                                                         }
                                                         return subPart;
                                                     });
