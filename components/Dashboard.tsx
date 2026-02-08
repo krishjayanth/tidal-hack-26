@@ -11,23 +11,23 @@ interface DashboardProps {
 export const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
     const [targetEvent, setTargetEvent] = useState<PredictionEvent>({
         id: 'target',
-        name: 'Bitcoin $100K Milestone',
-        description: 'Will Bitcoin reach $100,000 USD before June 1st, 2025?',
-        probability: 45
+        name: 'Seattle vs New England',
+        description: 'Will the New England Patriots win Super Bowl LX?',
+        probability: 33
     });
 
     const [relatedEvents, setRelatedEvents] = useState<PredictionEvent[]>([
         {
             id: '1',
-            name: 'Fed Rate Cut Policy',
-            description: 'The Federal Reserve reduces benchmark interest rates by 25bps or more in Q1.',
-            probability: 65
+            name: 'Seattle wins by over 4.5 points',
+            description: '',
+            probability: 51
         },
         {
             id: '2',
-            name: 'MSTR Treasury Expansion',
-            description: 'MicroStrategy announces additional Bitcoin acquisition exceeding $1B in current quarter.',
-            probability: 80
+            name: 'Rhamondre Stevenson to score 2 or more touchdowns',
+            description: '',
+            probability: 10
         }
     ]);
 
