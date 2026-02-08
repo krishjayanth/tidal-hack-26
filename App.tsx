@@ -271,28 +271,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
-
-      <footer className="mt-auto border-t border-slate-100 py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-16 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-            <div className="space-y-4">
-              <p className="text-slate-900">Protocol</p>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Synthesis Core</span>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Alpha Discovery</span>
-            </div>
-            <div className="space-y-4">
-              <p className="text-slate-900">Endpoints</p>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Live Ingestion</span>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Grounding Search</span>
-            </div>
-            <div className="space-y-4">
-              <p className="text-slate-900">Intelligence</p>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Compliance</span>
-              <span className="block hover:text-indigo-600 cursor-pointer transition-colors">Data Privacy</span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
