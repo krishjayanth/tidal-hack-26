@@ -32,7 +32,7 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
 -   **AI Intelligence**: OpenRouter API (DeepSeek R1 / Chimera)
 -   **State Management**: React Hooks
 
-## ⚡ Getting Started
+## Getting Started
 
 ### Prerequisites
 
