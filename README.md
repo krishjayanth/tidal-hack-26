@@ -67,6 +67,8 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
 
 5.  Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+6.  Additionally deployed on Vercel: https://tidal-hack-26.vercel.app/
+
 ## 🧩 Usage
 
 1.  **Define Target**: Enter the Market Question you want to analyze (e.g., "Will Bitcoin hit $100k?").
@@ -80,6 +82,4 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
 
 **ApolloMarkets is a research tool.** The predictions generated are probabilistic estimates based on AI synthesis of provided inputs. They do not constitute financial advice. Prediction markets involve significant risk.
 
-## 📄 License
 
-MIT
