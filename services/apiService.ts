@@ -81,7 +81,7 @@ export const analyzeMarket = async (
   const systemInstructions = `
     ACT AS: ApolloMarkets, a world-class quantitative startup specializing in prediction market arbitrage.
     
-    MISSION OBJECTIVE: You are an arbiter of truth. Your goal is to CALCULATE the "True Probability" of a Target Event happening, based *strictly* on the provided Correlated Signals.
+    MISSION OBJECTIVE: You are an arbiter of truth. Your goal is to CALCULATE the "True Probability" of a Target Event happening, based on the provided Correlated Signals.
 
     CRITICAL INSTRUCTION:
     - DISREGARD the "Current Market Trading Value" as a baseline. It represents the *crowd's* potential error.
@@ -102,16 +102,18 @@ export const analyzeMarket = async (
   const userPrompt = `
     TARGET EVENT: "${target.name}"
     DESCRIPTION: "${target.description}"
-    Current Crowd Price: ${target.probability}%  <-- TREAT THIS AS POTENTIALLY WRONG.
+    Current Crowd Price: ${target.probability}%  <-- TREAT THIS AS POTENTIALLY WRONG, BUT STILL CREDIBLE.
 
     CORRELATED SIGNALS (The Alpha):
     ${relatedContext}
 
     TASK:
-    1. Analyze each signal's probability.
-    2. If a signal is highly correlated and has High Probability, it implies the Target should also be High.
-    3. If a signal is highly correlated but has Low Probability, it implies the Target should be Low.
-    4. CALCULATE the Adjusted Probability.
+    1. Read each signals description and understand.
+    2. Use real world events and data that are as up to data as possible.
+    3. Analyze each signal's probability.
+    4. If a signal is highly correlated and has High Probability, it implies the Target should also be High.
+    5. If a signal is highly correlated but has Low Probability, it implies the Target should be Low.
+    6. CALCULATE the Adjusted Probability.
   `;
 
   try {

@@ -7,23 +7,23 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const App: React.FC = () => {
   const [targetEvent, setTargetEvent] = useState<PredictionEvent>({
     id: 'target',
-    name: 'Bitcoin $100K Milestone',
-    description: 'Will Bitcoin reach $100,000 USD before June 1st, 2025?',
-    probability: 45
+    name: 'Seattle vs New England',
+    description: 'Will the New England Patriots win Super Bowl LX?',
+    probability: 33
   });
 
   const [relatedEvents, setRelatedEvents] = useState<PredictionEvent[]>([
     {
       id: '1',
-      name: 'Fed Rate Cut Policy',
-      description: 'The Federal Reserve reduces benchmark interest rates by 25bps or more in Q1.',
-      probability: 65
+      name: 'Seattle wins by over 4.5 points',
+      description: '',
+      probability: 51
     },
     {
       id: '2',
-      name: 'MSTR Treasury Expansion',
-      description: 'MicroStrategy announces additional Bitcoin acquisition exceeding $1B in current quarter.',
-      probability: 80
+      name: 'Rhamondre Stevenson to score 2 or more touchdowns',
+      description: '',
+      probability: 10
     }
   ]);
 
@@ -80,14 +80,14 @@ const App: React.FC = () => {
           <div className="flex items-center gap-3">
             <div className="bg-slate-950 p-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <circle cx="12" cy="12" r="10" strokeWidth={2} />
               </svg>
             </div>
             <div>
               <h1 className="text-lg font-black tracking-tight text-slate-950 uppercase leading-none">
                 Apollo<span className="text-indigo-600 font-black">Markets</span>
               </h1>
-              <span className="text-[8px] font-black text-slate-400 tracking-[0.3em] uppercase">Future-Ready Intel</span>
+
             </div>
           </div>
           <button
@@ -118,9 +118,7 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Inputs */}
           <div className="lg:col-span-5 xl:col-span-4 space-y-8">
-            <div className="border-b border-slate-100 pb-2">
-              <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Mission Control</h3>
-            </div>
+
 
             <EventCard
               event={targetEvent}
@@ -130,12 +128,12 @@ const App: React.FC = () => {
 
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Correlated Signals</h4>
+                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Correlated Events</h4>
                 <button
                   onClick={handleAddRelated}
                   className="px-3 py-1 text-[9px] font-black text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-100 rounded transition-all uppercase tracking-widest"
                 >
-                  Add Signal
+                  Add Event
                 </button>
               </div>
 
@@ -161,8 +159,8 @@ const App: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-2">Awaiting Mission Parameters</h4>
-                <p className="text-xs max-w-xs leading-relaxed font-medium">Input your target market and correlated sub-signals to generate a predictive synthesis report.</p>
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-2">Awaiting Event Parameters</h4>
+                <p className="text-xs max-w-xs leading-relaxed font-medium">Input your target event and correlated events to generate a predictive synthesis report.</p>
               </div>
             )}
 
@@ -286,13 +284,6 @@ const App: React.FC = () => {
 
       <footer className="mt-auto border-t border-slate-100 py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="max-w-sm">
-            <h5 className="text-[11px] font-black text-slate-950 uppercase tracking-[0.2em] mb-4">ApolloMarkets Stratagem Labs</h5>
-            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tight leading-loose">
-              Predicting the future through high-fidelity multivariate synthesis.
-              The next generation of strategic market intelligence.
-            </p>
-          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-16 text-[10px] font-black text-slate-400 uppercase tracking-widest">
             <div className="space-y-4">
               <p className="text-slate-900">Protocol</p>
