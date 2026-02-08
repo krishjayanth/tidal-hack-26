@@ -1,10 +1,12 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface LandingPageProps {
     onLaunch: () => void;
 }
 
 export const LandingPage: React.FC<LandingPageProps> = ({ onLaunch }) => {
+    const navigate = useNavigate();
+
     return (
         <div className="min-h-screen bg-white text-slate-900 selection:bg-indigo-100 font-sans overflow-x-hidden">
             {/* Background Gradients */}
@@ -32,7 +34,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onLaunch }) => {
 
                     <div className="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
                         <a href="#features" className="hover:text-indigo-600 transition-colors">About Us</a>
-                        <a href="#intel" className="hover:text-indigo-600 transition-colors">Intelligence</a>
+                        <button onClick={() => navigate('/intel')} className="hover:text-indigo-600 transition-colors uppercase">Intelligence</button>
                         <a href="#pricing" className="hover:text-indigo-600 transition-colors">Pricing</a>
                     </div>
 
@@ -144,6 +146,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onLaunch }) => {
                     </div>
                 </div>
             </section>
+
 
             {/* Pricing Section */}
             <section id="pricing" className="py-24 relative overflow-hidden">
