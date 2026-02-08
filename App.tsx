@@ -104,16 +104,6 @@ const App: React.FC = () => {
       </nav>
 
       <main className="max-w-7xl mx-auto px-6 mt-16 pb-24">
-        <header className="mb-16 border-l-8 border-indigo-600 pl-8 max-w-3xl">
-          <h2 className="text-4xl font-black text-slate-950 uppercase tracking-tighter leading-none mb-4">
-            The future isn’t a mystery. <br />It’s an equation.
-          </h2>
-          <p className="text-slate-500 text-lg font-medium leading-relaxed">
-            Market volatility is just information waiting to be synthesized. ApolloMarkets leverages
-            high-fidelity AI synthesis to turn market noise into predictive alpha.
-            Dominate the prediction markets of tomorrow, today.
-          </p>
-        </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Inputs */}
