@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>The Future Isn't a Mystery. It's an Equation.</h3>
-  <p>High-Fidelity AI Synthesis for Prediction Market Edge.</p>
+  <p>High-Fidelity AI Synthesis for Prediction Market Alpha.</p>
   https://tidal-hack-26.vercel.app/
 </div>
 
