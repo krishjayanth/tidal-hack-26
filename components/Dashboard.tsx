@@ -253,7 +253,23 @@ export const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
                                     <div className="p-8 border border-slate-200 rounded-md bg-white flex flex-col">
                                         <h4 className="text-[11px] font-black text-slate-950 uppercase tracking-[0.2em] mb-6 border-b border-slate-50 pb-2">Synthesis Intel</h4>
                                         <div className="prose prose-slate prose-xs flex-1 max-h-[350px] overflow-y-auto pr-4 custom-scrollbar text-slate-600 font-medium leading-[1.8] text-[13px] whitespace-pre-wrap">
-                                            {result.reasoning}
+                                            {result.reasoning
+                                                .replace(/['`]([^'`]*)['`]/g, (m, c) => /[0-9=\-<>]/.test(c) ? c : m)
+                                                .split(/(\*\*.*?\*\*|\*.*?\*)/g).map((part, index) => {
+                                                    if (part.startsWith('**') && part.endsWith('**')) {
+                                                        return <span key={index} className="font-bold text-slate-800">{part.slice(2, -2)}</span>;
+                                                    }
+                                                    if (part.startsWith('*') && part.endsWith('*')) {
+                                                        return <span key={index} className="">{part.slice(1, -1)}</span>;
+                                                    }
+                                                    // Format numbers and math operators
+                                                    return part.split(/(\d+(?:\.\d+)?%?|\s*[+\-=<>:/]\s*)/g).map((subPart, subIndex) => {
+                                                        if (/^(\d+(?:\.\d+)?%?|\s*[+\-=<>:/]\s*)$/.test(subPart)) {
+                                                            return <span key={`${index}-${subIndex}`} className="font-mono">{subPart}</span>;
+                                                        }
+                                                        return subPart;
+                                                    });
+                                                })}
                                         </div>
                                     </div>
                                 </div>
