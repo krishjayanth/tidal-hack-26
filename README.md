@@ -3,6 +3,7 @@
 <div align="center">
   <h3>The Future Isn't a Mystery. It's an Equation.</h3>
   <p>High-Fidelity AI Synthesis for Prediction Market Alpha.</p>
+  https://tidal-hack-26.vercel.app/
 </div>
 
 ---
@@ -66,8 +67,6 @@ It detects market inefficiencies, providing an **Alpha Index** and **Confidence 
     ```
 
 5.  Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-6.  Additionally deployed on Vercel: https://tidal-hack-26.vercel.app/
 
 ## 🧩 Usage
 
